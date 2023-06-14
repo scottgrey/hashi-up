@@ -19,7 +19,7 @@ type Version struct {
 }
 
 func GetLatestVersion(product string) (string, error) {
-	url := fmt.Sprintf("https://api.releases.hashicorp.com/v1/releases/%s?license_class=oss", product)
+	url := fmt.Sprintf("https://api.releases.hashicorp.com/v1/releases/%s/latest?license_class=oss", product)
 
 	client := http.Client{
 		Timeout: time.Second * 2,
